@@ -1,9 +1,18 @@
 import Header from './Components/Layout/Header';
 import './App.css';
+import Section from './Components/Layout/Section';
 
 function App() {
+
+
+
+
+
   return (
-    <Header></Header>
+    <div>
+    <Header/>
+    <Section/>
+    </div>
   );
 }
 
