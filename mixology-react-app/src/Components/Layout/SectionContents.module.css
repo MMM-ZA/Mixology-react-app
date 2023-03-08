@@ -1,3 +1,138 @@
-.main-image {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.summary {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
+  grid-gap: 24px;
+}
+
+ul {
+  display: flex;
+  min-height: 750px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  width: 100%;
+  min-width: 100%;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1280px) {
+  ul {
+    flex-direction: row;
+  }
+}
+
+li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+}
+
+li:before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.75);
+}
+
+li.active {
+  flex: 6;
+  cursor: default;
+}
+
+li.active:before {
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  h2 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 30;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: top 0.35s, opacity 0.15s;
+  transform-origin: 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media only screen and (min-width: 1280px) {
+  h3 {
+    top: 100%;
+    left: 50%;
+    font-size: 32px;
+    transform: translate(-20px, -50%) rotate(-90deg);
+  }
+}
+
+li.active h3 {
+  opacity: 0;
+  top: 200%;
+}
+
+.section-content {
+  position: relative;
+  z-index: 30;
+  opacity: 0;
+  align-self: flex-end;
+  width: 100%;
+  transition: all 0.35s 0.1s ease-out;
+}
+
+.section-content.active {
+  opacity: 1;
+}
+
+.section-content .inner {
+  position: absolute;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+
 }

@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Card from "../UI/Card";
 import classes from "./SectionContents.module.css";
 
-const sectionData = [
+const SectionContents = () => {
+const [active, setActive] = useState(0);
+ const sectionData = [
   {
     id: 's1',
     name: 'Gin',
@@ -40,37 +41,34 @@ const sectionData = [
     backgroundImage: 'url("src/Assets/brandy.png")',
   },
 ];
+  return (
+    <ul>
+      {sectionData.map((section) => (
+       <li
+          key={section.id}
+          style={{ backgroundImage: `url(${section.backgroundImage})` }}
+          role="button"
+          className={active === section.id ? "active" : ""}
+          onClick={() => setActive(section.id)}
+        >
+          <h3>{section.name}</h3>
+          <div className= {classes["section-content"]}>
+            <div className={classes["inner"]}>
+            <div className={classes["summary"]}>
+                <h2>{section.name}</h2>
+                <p>{section.description}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 
 
-const SectionContents = () => {
-  const [activeSection, setActiveSection] = useState(sectionData[0].id);
 
-  const handleSectionClick = (sectionId) => {
-    setActiveSection(sectionId);
   };
 
-  return (
-    <div>
-      <ul>
-        {sectionData.map(({ id, name }) => (
-          <li key={id}>
-            <button onClick={() => handleSectionClick(id)}>{name}</button>
-          </li>
-        ))}
-      </ul>
-      {sectionData.map(({ id, name, description, backgroundImage }) =>
-        id === activeSection ? (
-          <div key={id}>
-            <img className={classes['main-image']} src={backgroundImage} alt='glass of brandy'/>
-            <h2>{name}</h2>
-            <p>{description}</p>
 
-          </div>
-        ) : null
-      )}
-      <Card/>
-    </div>
-  );
-};
 
 export default SectionContents;

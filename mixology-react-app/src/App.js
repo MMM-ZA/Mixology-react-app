@@ -1,17 +1,14 @@
 import Header from './Components/Layout/Header';
 import './App.css';
-import Section from './Components/Layout/Section';
+import SectionContents from './Components/Layout/SectionContents';
 
 function App() {
-
-
-
 
 
   return (
     <div>
     <Header/>
-    <Section/>
+    <SectionContents/>
     </div>
   );
 }
