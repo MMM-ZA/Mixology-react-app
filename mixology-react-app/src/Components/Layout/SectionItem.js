@@ -1,7 +1,8 @@
 import classes from "./SectionItem.module.css";
 import React from "react";
 
-const SectionItem = ({ section, active, onClick }) => {
+
+const SectionItem = ({ section, active, onClick}) => {
   return (
 
     <li
@@ -10,9 +11,11 @@ const SectionItem = ({ section, active, onClick }) => {
       className={active ? classes.active : ""}
       onClick={onClick}
     >
+
       <h3>{section.name}</h3>
+
       {active && (
-        <div className={classes["section-content"]}>
+        <div className={`${classes["section-content"]} test-class`}>
           <div className={classes["inner"]}>
             <div className={classes["summary"]}>
               <h2>{section.name}</h2>
@@ -21,8 +24,7 @@ const SectionItem = ({ section, active, onClick }) => {
           </div>
         </div>
 
-      )
-      }
+      )}
       </li>
 
 
