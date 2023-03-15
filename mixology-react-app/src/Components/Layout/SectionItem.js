@@ -27,7 +27,6 @@ const SectionItem = ({ section, active, onClick}) => {
       )}
       </li>
 
-
   );
 };
 
