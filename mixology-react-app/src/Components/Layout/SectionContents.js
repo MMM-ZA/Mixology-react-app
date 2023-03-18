@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionItem from "./SectionItem";
+import ActiveDrinks from "../Drinks/ActiveDrinks";
 import gin from './../../Assets/gin.png';
 import whiskey from './../../Assets/whiskey.png';
 import tequila from './../../Assets/tequila.png';
@@ -50,6 +51,7 @@ const SectionContents = () => {
   const [active, setActive] = useState(sectionData[0].id);
 
   return (
+    <div>
     <ul>
       {sectionData.map((section) => (
         <SectionItem
@@ -60,6 +62,8 @@ const SectionContents = () => {
         />
       ))}
     </ul>
+        <ActiveDrinks sectionData={sectionData} active={active} />
+    </div>
   );
 };
 

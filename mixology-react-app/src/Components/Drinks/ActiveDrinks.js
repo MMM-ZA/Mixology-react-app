@@ -1,174 +1,172 @@
-import { useState } from "react";
-import SectionItem from "../Layout/SectionItem";
+import React from "react";
 
-
-const DUMMY_DATA = [
+const DUMMY_DRINKS = [
   {
-    id:'d1',
-    section:'Gin',
+    id: 'd1',
+    sectionId: 's1',
     name: 'gin and tonic',
     price: 16.99,
-
   },
   {
     id: 'd2',
-    section: 'Gin',
+    sectionId: 's1',
     name: 'Negroni',
     price: 18.99,
   },
   {
     id: 'd3',
-    section: 'Gin',
+    sectionId: 's1',
     name: 'Tom Collins',
     price: 17.99,
   },
   {
     id: 'd4',
-    section: 'Gin',
+    sectionId: 's1',
     name: 'Martini',
     price: 19.99,
   },
-   {
+  {
     id: 'd5',
-    section: 'Whiskey',
+    sectionId: 's2',
     name: 'Old Fashioned',
     price: 18.99,
   },
   {
     id: 'd6',
-    section: 'Whiskey',
+    sectionId: 's2',
     name: 'Manhattan',
     price: 19.99,
   },
   {
     id: 'd7',
-    section: 'Whiskey',
+    sectionId: 's2',
     name: 'Whiskey Sour',
     price: 17.99,
   },
   {
     id: 'd8',
-    section: 'Whiskey',
+    sectionId: 's2',
     name: 'Irish Coffee',
     price: 15.99,
   },
   {
     id: 'd9',
-    section: 'Tequila',
+    sectionId: 's3',
     name: 'Margarita',
     price: 14.99,
   },
   {
     id: 'd10',
-    section: 'Tequila',
+    sectionId: 's3',
     name: 'Tequila Sunrise',
     price: 12.99,
   },
   {
     id: 'd11',
-    section: 'Tequila',
+    sectionId: 's3',
     name: 'Paloma',
     price: 13.99,
   },
   {
     id: 'd12',
-    section: 'Tequila',
+    sectionId: 's3',
     name: 'Mexican Mule',
     price: 15.99,
   },
-   {
+  {
     id: 'd13',
-    section: 'Rum',
+    sectionId: 's4',
     name: 'Daiquiri',
     price: 14.99,
   },
   {
     id: 'd14',
-    section: 'Rum',
+    sectionId: 's4',
     name: 'Mojito',
     price: 12.99,
   },
   {
     id: 'd15',
-    section: 'Rum',
+    sectionId: 's4',
     name: 'Piña Colada',
     price: 13.99,
   },
   {
     id: 'd16',
-    section: 'Rum',
+    sectionId: 's4',
     name: 'Dark and Stormy',
     price: 15.99,
   },
   {
     id: 'd17',
-    section: 'Vodka',
+    sectionId: 's5',
     name: 'Bloody Mary',
     price: 14.99,
   },
   {
     id: 'd18',
-    section: 'Vodka',
+    sectionId: 's5',
     name: 'Cosmopolitan',
     price: 12.99,
   },
   {
     id: 'd19',
-    section: 'Vodka',
+    sectionId: 's5',
     name: 'Screwdriver',
     price: 13.99,
   },
   {
     id: 'd20',
-    section: 'Vodka',
+    sectionId: 's5',
     name: 'White Russian',
     price: 15.99,
-  },{
+  },
+  {
     id: 'd21',
-    section: 'Brandy',
+    sectionId: 's6',
     name: 'Brandy Alexander',
     price: 14.99,
   },
   {
     id: 'd22',
-    section: 'Brandy',
+    sectionId: 's6',
     name: 'Sidecar',
     price: 12.99,
   },
   {
     id: 'd23',
-    section: 'Brandy',
+    sectionId: 's6',
     name: 'Sazerac',
     price: 13.99,
   },
   {
     id: 'd24',
-    section: 'Brandy',
+    sectionId: 's6',
     name: 'B&B',
     price: 15.99,
   }
 ];
 
-const AvailableDrinks = ({section}) =>  {
-  const [activeSection, setActiveSection] = useState(DUMMY_DATA[0].section);
 
-  const filterSection = (section) => {
-  const filteredData = DUMMY_DATA.filter((item) => item.section === section.name);
-  return filteredData;
-};
 
- return (
+const ActiveDrinks = ({ drinks }) => {
+  const drinkList = DUMMY_DRINKS.map((drink) => ({
+    key: drink.id,
+    id: drink.id,
+    name: drink.name,
+    price: drink.price
+  }));
+
+  return (
     <div>
-      <SectionItem item={filterSection} onClick={() => setActiveSection(activeSection)}>
-        {DUMMY_DATA.map((item) => (
-          <div key={item.id}>
-            <h3>{item.name}</h3>
-            <p>{item.price}</p>
-          </div>
-        ))}
-      </SectionItem>
+      {drinkList.map((drink) => (
+        <div key={drink.id}>
+          <h4>{drink.name}</h4>
+          <p>Price: ${drink.price.toFixed(2)}</p>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default AvailableDrinks;
+export default ActiveDrinks;
