@@ -157,6 +157,8 @@ const ActiveDrinks = ({ drinks }) => {
     price: drink.price
   }));
 
+
+
   return (
     <div>
       {drinkList.map((drink) => (
