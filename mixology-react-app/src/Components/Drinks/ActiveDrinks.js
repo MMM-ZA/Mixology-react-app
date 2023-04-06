@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const DUMMY_DRINKS = [
   {
     id: 'd1',
@@ -147,16 +148,15 @@ const DUMMY_DRINKS = [
   }
 ];
 
-
-
 const ActiveDrinks = ({ drinks }) => {
+
+
   const drinkList = DUMMY_DRINKS.map((drink) => ({
     key: drink.id,
     id: drink.id,
     name: drink.name,
     price: drink.price
   }));
-
 
 
   return (

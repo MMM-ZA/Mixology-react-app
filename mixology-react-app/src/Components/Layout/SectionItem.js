@@ -1,38 +1,28 @@
 import classes from "./SectionItem.module.css";
-import React, { useReducer } from "react";
 import ActiveDrinks from "../Drinks/ActiveDrinks";
 
-const reducer = (filteredDrinks, drink, section) => {
-  if (drink.sectionId === section.id) {
-    filteredDrinks.push(drink);
-  }
-  return filteredDrinks;
-};
 
-const SectionItem = ({ section, active, onClick, drinks }) => {
-  const [activeDrinks, dispatch] = useReducer(reducer, []);
 
-  if (Array.isArray(drinks)) {
-    drinks.forEach(drink => {
-      dispatch(drink);
-    });
-  }
+const SectionItem = (props) => {
+
 
   return (
     <li
-      style={{ backgroundImage: `url(${section.backgroundImage})` }}
+      style={{ backgroundImage: `url(${props.section.backgroundImage})` }}
       role="button"
-      className={active ? classes.active : ""}
-      onClick={onClick}
+      className={props.active ? classes.active : ""}
+      onClick={props.onClick}
     >
-      <h3>{section.name}</h3>
-      {active && (
+      <h3>{props.section.name}</h3>
+      {props.active && (
         <div className={`${classes["section-content"]} test-class`}>
           <div className={classes["inner"]}>
             <div className={classes["summary"]}>
-              <h2>{section.name}</h2>
-              <p>{section.description}</p>
-              <ActiveDrinks drinks={activeDrinks} />
+              <h2>{props.section.name}</h2>
+              <p>{props.section.description}</p>
+              <ActiveDrinks/>
+              <ul>
+      </ul>
             </div>
           </div>
         </div>
