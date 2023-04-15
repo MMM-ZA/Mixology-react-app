@@ -46,7 +46,7 @@ const sectionData = [
   },
 ];
 
-const SectionContents = (props) => {
+const SectionContents = () => {
   const [active, setActive] = useState(sectionData[0].id);
 
   return (

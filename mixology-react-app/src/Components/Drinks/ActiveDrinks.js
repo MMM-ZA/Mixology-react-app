@@ -148,12 +148,12 @@ const DUMMY_DRINKS = [
   }
 ];
 
-const ActiveDrinks = ({ drinks }) => {
+const ActiveDrinks = (props) => {
 
-
-  const drinkList = DUMMY_DRINKS.map((drink) => ({
+  const drinkList = DUMMY_DRINKS.filter((drink) => drink.sectionId === props.sectionId).map((drink) => ({
     key: drink.id,
     id: drink.id,
+    sectionId: drink.sectionId,
     name: drink.name,
     price: drink.price
   }));
