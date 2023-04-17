@@ -1,0 +1,4 @@
+
+.menu ul {
+  flex-direction:column !important;
+}

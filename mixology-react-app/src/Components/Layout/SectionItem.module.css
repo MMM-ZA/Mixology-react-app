@@ -22,8 +22,7 @@ body {
 
 ul {
   display: flex;
-  min-height: 75 0px;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -66,6 +65,7 @@ li:before {
 li.active {
   flex: 6;
   cursor: default;
+
 }
 
 li.active:before {

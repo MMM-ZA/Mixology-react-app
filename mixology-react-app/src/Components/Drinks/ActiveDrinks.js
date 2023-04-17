@@ -1,4 +1,6 @@
 import React from "react";
+import DrinkItem from "./DrinkItem";
+import classes from './ActiveDrinks.module.css';
 
 
 const DUMMY_DRINKS = [
@@ -150,25 +152,18 @@ const DUMMY_DRINKS = [
 
 const ActiveDrinks = (props) => {
 
-  const drinkList = DUMMY_DRINKS.filter((drink) => drink.sectionId === props.sectionId).map((drink) => ({
-    key: drink.id,
-    id: drink.id,
-    sectionId: drink.sectionId,
-    name: drink.name,
-    price: drink.price
-  }));
+  const drinkList = DUMMY_DRINKS.filter((drink) => drink.sectionId === props.sectionId).map((drink) => <DrinkItem
+    key={drink.id}
+    id={drink.id}
+    sectionId={drink.sectionId}
+    name= {drink.name}
+    price= {drink.price}
+  />);
 
 
   return (
-    <div>
-      {drinkList.map((drink) => (
-        <div key={drink.id}>
-          <h4>{drink.name}</h4>
-          <p>Price: ${drink.price.toFixed(2)}</p>
-        </div>
-      ))}
-    </div>
-  );
+    <ul className={classes.menu}>{drinkList}</ul>
+  )
 };
 
 export default ActiveDrinks;
