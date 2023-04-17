@@ -1,4 +1,9 @@
-.menuList li{
+.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.container h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
 }

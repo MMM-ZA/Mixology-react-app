@@ -7,7 +7,7 @@ const DUMMY_DRINKS = [
   {
     id: 'd1',
     sectionId: 's1',
-    name: 'gin and tonic',
+    name: 'Gin and Tonic',
     price: 16.99,
   },
   {
@@ -162,7 +162,9 @@ const ActiveDrinks = (props) => {
 
 
   return (
+    <div className={classes.wrapper}>
     <ul className={classes.menu}>{drinkList}</ul>
+    </div>
   )
 };
 

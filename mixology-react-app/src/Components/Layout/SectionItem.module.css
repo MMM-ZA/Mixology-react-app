@@ -33,7 +33,7 @@ ul {
 }
 
 @media only screen and (min-width: 1280px) {
-  ul {
+ ul {
     flex-direction: row;
   }
 }
@@ -68,9 +68,9 @@ li.active {
 
 }
 
-li.active:before {
+/* li.active:before {
   background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
-}
+} */
 
 h2 {
   font-size: 36px;
