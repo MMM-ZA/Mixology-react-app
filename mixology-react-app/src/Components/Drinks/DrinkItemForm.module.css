@@ -1,13 +1,16 @@
 .form {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.50rem;
 }
 
 .form button {
   font: inherit;
   cursor: pointer;
-  background-color: #8a2b06;
-  border: 1px solid #8a2b06;
-  color: white;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
   padding: 0.25rem 2rem;
   border-radius: 20px;
   font-weight: bold;
