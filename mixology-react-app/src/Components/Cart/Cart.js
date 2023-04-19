@@ -1,26 +1,33 @@
+import Modal from '../UI/Modal';
 import classes from './Cart.module.css';
 
-const cartItems = (
+
+const Cart = props => {
+
+  const cartItems = (
     <ul className={classes['cart-items']}>
-     [{ id: 'd1',
+      {[{ id: 'd1',
     sectionId: 's1',
     amount: 2,
     name: 'Gin and Tonic',
     price: 16.99}].map((item) => (
-      ))
+      <li>{item.name}</li>
+      ))}
     </ul>
   );
 
-
-
-
-const Cart = props => {
   return (
-    <div>
-    cartitems
-    <div></div>
-    <div></div>
-    </div>
+    <Modal>
+       {cartItems }
+       <div>
+       <span>Total Amount</span>
+       <span>24.89</span>
+       </div>
+        <div className={classes.actions}>
+         <button className={classes['button--alt']}>Close</button>
+         <button className={classes.button}>Order</button>
+       </div>
+    </Modal>
   )
 
 };
