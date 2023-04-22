@@ -4,14 +4,14 @@ import HeaderCartButton from './HeaderCartButton';
 
 
 
-const Header = () => {
+const Header = (props) => {
   return (
    <Fragment>
      <header className={classes.header}>
       <div className={classes.wrapper}>
       <h1>Mixology</h1>
      </div>
-     <HeaderCartButton/>
+     <HeaderCartButton onClick={props.onShowCart}/>
 
      </header>
    </Fragment>
