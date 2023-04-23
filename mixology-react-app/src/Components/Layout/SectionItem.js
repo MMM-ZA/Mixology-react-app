@@ -26,7 +26,7 @@ const SectionItem = (props) => {
     >
       <h3>{props.section.name}</h3>
       {props.active && (
-        <div className={`${classes["section-content"]} test-class`}>
+        <div className={`${classes["section-content"]} content-class`}>
           <div className={classes["inner"]}>
             <div className={classes["summary"]}>
               <h2>{props.section.name}</h2>
