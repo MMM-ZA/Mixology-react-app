@@ -1,13 +1,11 @@
-.cart-item ul {
+.cart-item li {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #8a2b06;
   padding: 1rem 0;
   margin: 1rem 0;
-  max-height: 20rem;
-  overflow: scroll;
+
 }
 
 .cart-item h2 {
