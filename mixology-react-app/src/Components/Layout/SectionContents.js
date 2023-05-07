@@ -11,37 +11,37 @@ const sectionData = [
   {
     id: 's1',
     name: 'Gin',
-    description: 'Gin is a clear, high-proof spirit that is flavored with botanicals, typically juniper berries, and other herbs and spices. It is often used in cocktails and is known for its distinctive pine and citrus flavors.',
+    description: 'The classic London dry gin is like a sophisticated spy movie - smooth, crisp, and full of intrigue. With a blend of botanicals, juniper berries, and a touch of citrus, gin is the perfect choice for a refreshing cocktail.',
     backgroundImage: gin,
   },
   {
     id: 's2',
     name: 'Whiskey',
-    description: 'Whiskey is a spirit made from fermented grains, typically barley, corn, rye, or wheat, and aged in oak barrels. There are several different types of whiskey, including bourbon, Scotch, and Irish whiskey, each with its own distinct flavor profile.',
+    description: 'Whiskey is like a warm, comforting hug in a glass. This classic spirit is made from fermented grain mash and aged in oak barrels, giving it a rich, complex flavor. ',
     backgroundImage: whiskey,
   },
   {
     id: 's3',
     name: 'Tequila',
-    description: 'Tequila is a spirit made from the blue agave plant, which is native to Mexico. It is typically produced in the state of Jalisco and is known for its distinctive smoky and earthy flavors.',
+    description: 'Tequila is the life of the party - bold, lively, and always ready to have a good time. Made from the blue agave plant, this Mexican spirit is perfect for a night of margaritas or shots with friends',
     backgroundImage: tequila,
   },
   {
     id: 's4',
     name: 'Rum',
-    description: 'Rum is a spirit made from sugarcane or molasses that is fermented and distilled. It is typically aged in oak barrels and has a sweet and slightly spicy flavor.',
+    description: ' Rum is like a tropical vacation in a glass - sweet, spicy, and full of sunshine. Made from sugarcane, this Caribbean spirit is perfect for sipping on a hot day or mixing up a classic cocktail like a Mai Tai or a Mojito. ',
     backgroundImage: rum,
   },
   {
     id: 's5',
     name: 'Vodka',
-    description: 'Vodka is a clear, neutral-tasting spirit that is made from fermented grains, potatoes, or other starches.',
+    description: 'Vodka is like a chameleon - it can blend into any cocktail and take on any flavor you want it to. Made from fermented grains or potatoes, this versatile spirit is perfect for mixing up a classic martini or a refreshing Moscow Mule. ',
     backgroundImage: vodka,
   },
   {
     id: 's6',
     name: 'Brandy',
-    description: 'Brandy is a spirit made from fermented fruit, typically grapes, and then aged in oak barrels. It has a rich and complex flavor and is often enjoyed as an after-dinner drink.',
+    description: 'Brandy is like a warm and cozy fireplace on a chilly winter night. This elegant spirit is made by distilling wine and then aging it in oak barrels.It has rich, deep flavor notes of vanilla and caramel',
     backgroundImage: brandy,
   },
 ];

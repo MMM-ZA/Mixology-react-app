@@ -13,6 +13,8 @@ const HeaderCartButton = (props) => {
 
   },0);
 
+  // const btnClasses = `${classes.button} ${classes.bump}`
+
   return (
     <button className={classes.buttonCart} onClick={props.onClick}>
       <span className={classes.icon} >
