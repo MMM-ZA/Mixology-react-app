@@ -13,6 +13,14 @@
   font-weight: bold;
 }
 
+@media (max-width:799px) {
+
+  .buttonCart {
+    width: 120px;
+    padding: 0.50rem 2rem;
+  }
+
+}
 .button:hover,
 .button:active {
   background-color: #2c0d00;
