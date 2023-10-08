@@ -31,3 +31,7 @@ To run the app locally, follow these steps:
 
 3. Start the development server:
  npm start
+<<<<<<< HEAD
+=======
+
+>>>>>>> d60e4691078512d39843a7c849d45ba7bfc804f6
